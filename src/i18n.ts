@@ -26,7 +26,7 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    fallbackLng: 'en', // Fallback to 'en' if detection fails
+    fallbackLng: 'en',
     interpolation: {
       escapeValue: false
     }

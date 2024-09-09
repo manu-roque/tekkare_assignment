@@ -3,6 +3,7 @@ import axios from 'axios';
 import Card from './Card';
 import KPIChart from './KPIChart';
 import { useTranslation } from 'react-i18next';
+import '../style/HospitalChart.css'
 
 
 interface MonthlyHospitalization {
@@ -37,35 +38,35 @@ const HospitalChart: React.FC = () => {
   };
 
   return (
-    <Card title="Hospitalizations by Hospital">
+    <Card title="Hospital Data">
         <div className="container mx-auto p-8">
-            <h1 className="text-3xl font-bold mb-8 text-center">Hospitalizations by Hospital</h1>
+            <h1 className="chart-title">Hospitalizations by Hospital</h1>
 
             <div className="mb-6">
-                <label htmlFor="hospital-select" className="block mb-2">Select a hospital:</label>
+                <label htmlFor="hospital-select" className="hospital-label-text">Select a hospital:</label>
                 <select
-                id="hospital-select"
-                className="block w-full p-2 border rounded"
-                onChange={e => {
-                    const hospitalName = e.target.value;
-                    const selected = hospitals.find(hospital => hospital.name === hospitalName);
-                    if (selected) handleSelectHospital(selected);
-                }}
+                  id="hospital-select"
+                  className="hospital-select"
+                  onChange={e => {
+                      const hospitalName = e.target.value;
+                      const selected = hospitals.find(hospital => hospital.name === hospitalName);
+                      if (selected) handleSelectHospital(selected);
+                  }}
                 >
                 <option value="">-- Select a hospital --</option>
-                {hospitals.map(hospital => (
-                    <option key={hospital.name} value={hospital.name}>
-                    {hospital.name}
-                    </option>
-                ))}
+                  {hospitals.map(hospital => (
+                      <option key={hospital.name} value={hospital.name}>
+                        {hospital.name}
+                      </option>
+                  ))}
                 </select>
             </div>
 
             {selectedHospital && (
                 <KPIChart
-                title={`Monthly Hospitalizations at ${selectedHospital.name}`}
-                data={selectedHospital.monthlyHospitalizations.map(hosp => hosp.value)}
-                labels={selectedHospital.monthlyHospitalizations.map(hosp => `${hosp.month} ${hosp.year}`)}
+                  title={`Monthly Hospitalizations at ${selectedHospital.name}`}
+                  data={selectedHospital.monthlyHospitalizations.map(hosp => hosp.value)}
+                  labels={selectedHospital.monthlyHospitalizations.map(hosp => `${hosp.month} ${hosp.year}`)}
                 />
             )}
         </div>

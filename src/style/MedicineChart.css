@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.chart-title {
+    @apply text-3xl font-bold mb-8 text-center
+}
+
+.medicine-label-text {
+    @apply block mb-2
+}
+
+.medicine-select {
+    @apply block w-full p-2 border rounded
+}

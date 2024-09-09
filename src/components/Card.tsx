@@ -1,5 +1,5 @@
-// src/components/Card.tsx
 import React from 'react';
+import '../style/Card.css'
 
 interface CardProps {
   title: string;
@@ -8,8 +8,8 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ title, children }) => {
   return (
-    <div className="p-6 bg-gray-100 rounded-lg shadow-md border border-gray-200">
-      <h2 className="text-2xl font-bold mb-4">{title}</h2>
+    <div className="card-container">
+      <h2 className="card-title">{title}</h2>
       <div>{children}</div>
     </div>
   );

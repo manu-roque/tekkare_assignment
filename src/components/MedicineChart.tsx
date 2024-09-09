@@ -3,6 +3,7 @@ import axios from 'axios';
 import Card from './Card';
 import KPIChart from './KPIChart';
 import { useTranslation } from 'react-i18next';
+import '../style/MedicineChart.css'
 
 
 interface PriceHistory {
@@ -45,13 +46,13 @@ const MedicineChart: React.FC = () => {
   return (
     <Card title="Medication Price History">
         <div className="container mx-auto p-8">
-            <h1 className="text-3xl font-bold mb-8 text-center">Medication Price History</h1>
+            <h1 className="chart-title">Medication Price History</h1>
             
             <div className="mb-6">
-                <label htmlFor="medication-select" className="block mb-2">Select a medication:</label>
+                <label htmlFor="medication-select" className="medicine-label-text">Select a medication:</label>
                 <select
                     id="medication-select"
-                    className="block w-full p-2 border rounded"
+                    className="medicine-select"
                     onChange={e => {
                         const [moleculeName, medicationName] = e.target.value.split('|');
                         const selectedMolecule = medicines.find(molecule => molecule.name === moleculeName);

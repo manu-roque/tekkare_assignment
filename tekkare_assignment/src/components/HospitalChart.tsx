@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Card from './Card';
 import KPIChart from './KPIChart';
+import { useTranslation } from 'react-i18next';
+
 
 interface MonthlyHospitalization {
   month: string;
@@ -15,6 +17,7 @@ interface Hospital {
 }
 
 const HospitalChart: React.FC = () => {
+
   const [hospitals, setHospitals] = useState<Hospital[]>([]);
   const [selectedHospital, setSelectedHospital] = useState<Hospital | null>(null);
 

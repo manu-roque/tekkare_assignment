@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Card from './Card';
 import KPIChart from './KPIChart';
+import { useTranslation } from 'react-i18next';
+
 
 interface PriceHistory {
   date: string;
@@ -21,6 +23,7 @@ interface Molecule {
 }
 
 const MedicineChart: React.FC = () => {
+  
   const [medicines, setMedicines] = useState<Molecule[]>([]);
   const [selectedMedication, setSelectedMedication] = useState<Medication | null>(null);
 

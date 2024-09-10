@@ -4,12 +4,15 @@ import MedicineChart from './MedicineChart';
 import HospitalChart from './HospitalChart';
 import '../style/Dashboard.css'
 import { useTranslation } from 'react-i18next';
+import DropdownLang from './DropdownLang';
 
 
 const Dashboard: React.FC = () => {
 
   return (
     <div className="dashboard-container">
+      <DropdownLang />
+      <br/>
       <div className="dashboard-grid">
         <MedicineChart />
         <HospitalChart />

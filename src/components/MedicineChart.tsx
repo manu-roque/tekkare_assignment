@@ -24,6 +24,8 @@ interface Molecule {
 }
 
 const MedicineChart: React.FC = () => {
+  const {t} = useTranslation();
+
   
   const [medicines, setMedicines] = useState<Molecule[]>([]);
   const [selectedMedication, setSelectedMedication] = useState<Medication | null>(null);
@@ -46,10 +48,10 @@ const MedicineChart: React.FC = () => {
   return (
     <Card title="Medication Price History">
         <div className="container mx-auto p-8">
-            <h1 className="chart-title">Medication Price History</h1>
+            <h1 className="chart-title">{t('medications')}</h1>
             
             <div className="mb-6">
-                <label htmlFor="medication-select" className="medicine-label-text">Select a medication:</label>
+                <label htmlFor="medication-select" className="medicine-label-text">{t('select_medication')}:</label>
                 <select
                     id="medication-select"
                     className="medicine-select"
@@ -60,7 +62,7 @@ const MedicineChart: React.FC = () => {
                         if (selectedMedication) handleSelectMedication(selectedMedication);
                     }}
                 >
-                <option value="">-- Select a medication --</option>
+                <option value="">-- {t('select_medication')} --</option>
                 {medicines.map(molecule => (
                     molecule.medications.map(medication => (
                     <option key={medication.name} value={`${molecule.name}|${medication.name}`}>

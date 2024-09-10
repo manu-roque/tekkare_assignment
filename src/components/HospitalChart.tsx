@@ -18,6 +18,7 @@ interface Hospital {
 }
 
 const HospitalChart: React.FC = () => {
+  const {t} = useTranslation();
 
   const [hospitals, setHospitals] = useState<Hospital[]>([]);
   const [selectedHospital, setSelectedHospital] = useState<Hospital | null>(null);
@@ -40,10 +41,10 @@ const HospitalChart: React.FC = () => {
   return (
     <Card title="Hospital Data">
         <div className="container mx-auto p-8">
-            <h1 className="chart-title">Hospitalizations by Hospital</h1>
+            <h1 className="chart-title">{t('hospitalizations')}</h1>
 
             <div className="mb-6">
-                <label htmlFor="hospital-select" className="hospital-label-text">Select a hospital:</label>
+                <label htmlFor="hospital-select" className="hospital-label-text">{t('select')}:</label>
                 <select
                   id="hospital-select"
                   className="hospital-select"
@@ -53,7 +54,7 @@ const HospitalChart: React.FC = () => {
                       if (selected) handleSelectHospital(selected);
                   }}
                 >
-                <option value="">-- Select a hospital --</option>
+                <option value="">-- {t('select')} --</option>
                   {hospitals.map(hospital => (
                       <option key={hospital.name} value={hospital.name}>
                         {hospital.name}

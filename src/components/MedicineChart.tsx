@@ -46,7 +46,7 @@ const MedicineChart: React.FC = () => {
   };
 
   return (
-    <Card title="Medication Price History">
+    <Card title="Medications">
         <div className="container mx-auto p-8">
             <h1 className="chart-title">{t('medications')}</h1>
             

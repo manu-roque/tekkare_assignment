@@ -1,10 +1,9 @@
-// src/components/Dashboard.tsx
 import React from 'react';
 import MedicineChart from './MedicineChart';
 import HospitalChart from './HospitalChart';
-import '../style/Dashboard.css'
-import { useTranslation } from 'react-i18next';
 import DropdownLang from './DropdownLang';
+
+import '../style/Dashboard.css'
 
 
 const Dashboard: React.FC = () => {

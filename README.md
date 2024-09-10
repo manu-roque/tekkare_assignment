@@ -1,46 +1,17 @@
-# Getting Started with Create React App
+to run the project: npm install > npm start
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+tech stack + tools used: 
+- React
+- Typescript
+- Tailwindcss
+- axios
+- i18next
+- react-chartjs-2
 
-## Available Scripts
+The tech I used is a mix of tech I'm familiar with and tech I'm currently in the process of learning (such as Tailwind) I want to show my eagerness of learning new things and also to show that I can get up to speed fast in any technology that is new to me
 
-In the project directory, you can run:
+I went for a page that let's you see medication prices over time and also the number of hospitalizations, to show these charts I used react-chartjs-2 as it's really simple to set up and has plenty of nice graphs to choose from. Using i18next I've also implemented a bilingual app (Eng/Fr).
 
-### `npm start`
+I would like to apologize for some of the lacking features such as a lack of responsive design. I've had a small amount of time to properly work on the project as I've had a very busy past week. However in order to implement responsive design, it would be a quick fix using tailwindcss responsive options. Time filtering is also missing but those are options that can also be modified on react-chartjs-2.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+I would love to be part of the team and be able to discuss more about the project in the future.
